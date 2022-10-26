@@ -2,7 +2,6 @@ import React from "react";
 import {
     Navigate,
     //Link,
-    useNavigate
 } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
@@ -13,7 +12,7 @@ const Home = () => {
     const idUsuario = localStorage.getItem("user");
     if (idUsuario === null) {
         return (
-            <Navigate to="/" replace state={"state"} />
+            <Navigate to="/" replace={true}/>
         );
     } else {
         return (
